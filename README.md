@@ -2,7 +2,7 @@
 
 This is work in progress. The original readme provided with ember.js is below.
 
-My notes on setting up this app can be found in the file (notes.md)[notes.md]
+My notes on setting up this app can be found in the file [notes.md](notes.md)
 
 --
 
