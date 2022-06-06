@@ -26,6 +26,16 @@ export default function() {
 
   this.namespace = 'api';
   
+  /* 
+     The following is a default function that returns all models of type 'user' that exist in mirage. 
+     'Exist' means that they have been generated at runtime, either as part of a test or in 
+     /mirage/scenarios/default.js
+  */
+  this.get('/users')
+
+
+  /* Alternatively, the function below returns a hard-coded json response
+
   this.get('/users', () => {
     return { 
       data: [
@@ -34,4 +44,6 @@ export default function() {
       ]
     };
   });
+
+  */
 }

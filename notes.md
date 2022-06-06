@@ -8,6 +8,11 @@ Mirage docs: https://www.ember-cli-mirage.com/docs
 
 Don't trust Google for mirage docs - google will often find docs for a very outdated version.
 
+Faker: https://fakerjs.dev/guide/ (used to seed data in factories)
+
+Actually, it does not work as documented, but we can use `ember-faker` instead:
+https://www.npmjs.com/package/ember-faker
+
 ### Initial setup
 
 In an elevated Windows Power Shell:
@@ -134,11 +139,38 @@ edit the relevant section in `config/environment.js` to reflect this:
 
 Restart ember for this to take effect.
 
-#### Factory
+
+#### Dynamically generate data with factories
+
+Setup a serializer so the mock-backend will be JSON-API compliant (we set up
+ember to expect this):
+
+```
+ember generate mirage-serializer application
+```
+
+And edit it to look like this:
+```
+import { JSONAPISerializer } from 'ember-cli-mirage';
+
+export default JSONAPISerializer.extend({
+  
+});
+```
+
+
+Prerequisite: `ember-faker` for random seed data.
+```
+ember install ember-faker
+```
+
+Create a factory:
 
 ```
 ember generate mirage-factory user
 ```
+
+
 
 And edit the created file. See here for details/examples:
 https://www.ember-cli-mirage.com/docs/data-layer/factories
