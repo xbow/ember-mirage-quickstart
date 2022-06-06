@@ -29,8 +29,8 @@ export default function() {
   this.get('/users', () => {
     return { 
       data: [
-        { id: 1, type: 'users', attributes: { name: 'Jane Doe' } },
-        { id: 2, type: 'users', attributes: { name: 'Alan Smithee' } },
+        { id: 1, type: 'users', attributes: { 'first-name': 'Jane', 'last-name': 'Doe' } },
+        { id: 2, type: 'users', attributes: { 'first-name': 'Alan', 'last-name': 'Smithee' } },
       ]
     };
   });
