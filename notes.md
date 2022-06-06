@@ -1,4 +1,12 @@
-## New Walkthrough:
+## Step by step - how I created this app
+
+These notes are a bit messy / WIP, will clean them up later!
+
+### Links:
+
+Mirage docs: https://www.ember-cli-mirage.com/docs
+
+Don't trust Google for mirage docs - google will often find docs for a very outdated version.
 
 ### Initial setup
 
@@ -126,4 +134,17 @@ edit the relevant section in `config/environment.js` to reflect this:
 
 Restart ember for this to take effect.
 
+#### Factory
+
+```
+ember generate mirage-factory user
+```
+
+And edit the created file. See here for details/examples:
+https://www.ember-cli-mirage.com/docs/data-layer/factories
+
+Furthermore, let's generate 'users' in the mirage/scenarios/default.js:
+```
+server.createList('user', 7)
+```
 

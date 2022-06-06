@@ -1,7 +1,12 @@
 # ember-mirage-quickstart
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is work in progress. The original readme provided with ember.js is below.
+
+My notes on setting up this app can be found in the file (notes.md)[notes.md]
+
+--
+
+Original ember.js readme:
 
 ## Prerequisites
 
