@@ -4,8 +4,6 @@
 
 <div class="restaurant-list">
   {{#each this.model.restaurants as |restaurant|}}
-    <div class="restaurant-card">
-      {{restaurant.name}}
-    </div>
+    <RestaurantCard @restaurant={{restaurant}}></RestaurantCard>
   {{/each}}
 </div>
