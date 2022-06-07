@@ -4,11 +4,19 @@ import { service } from '@ember/service';
 export default class CompareRoute extends Route {
   @service store;
 
-  model() {
+  queryParams = {
+    amount: {
+      refreshModel: true,
+    },
+  };
+
+  model(params) {
     console.info('running the model hook on /compare');
 
-    return {
-      restaurants: this.store.findAll('restaurant'),
-    };
+    return this.store.findAll('restaurant').then((restaurants) => {
+      return {
+        restaurants: restaurants.slice(0, params.amount),
+      };
+    });
   }
 }

@@ -6,4 +6,10 @@
   {{#each this.model.restaurants as |restaurant|}}
     <RestaurantCard @restaurant={{restaurant}}></RestaurantCard>
   {{/each}}
+
+  {{#if this.enableShowMoreButton}}
+    <LinkTo @route="compare" @query={{hash amount=10}}>
+      Weitere Burgerläden anzeigen 
+    </LinkTo>
+  {{/if}}
 </div>

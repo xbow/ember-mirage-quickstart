@@ -2,5 +2,9 @@
   <div class="rating">{{@restaurant.rating}}</div>
   <div class="name">{{@restaurant.name}}</div>
   {{!-- TBD: Burger availability --}}
-  <div class="address-button">Adresse</div>
+  <button 
+    role="button"
+    class="address-button" type="button" {{on "click" (fn this.openAddressModal @restaurant)}}>
+      Adresse
+  </button>
 </div>
