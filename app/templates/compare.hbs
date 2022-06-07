@@ -1,0 +1,11 @@
+{{page-title "Compare"}}
+
+<h2>Vergleiche deine Burgerläden</h2>
+
+<div class="restaurant-list">
+  {{#each this.model.restaurants as |restaurant|}}
+    <div class="restaurant-card">
+      {{restaurant.name}}
+    </div>
+  {{/each}}
+</div>
